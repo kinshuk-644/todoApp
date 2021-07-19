@@ -24,7 +24,7 @@
                     <div class="w-100 px-3">
                         <label for="desc">DESCRIPTION</label>
                         <br>
-                        <input class="w-100" type="textarea" id="desc" name="description" placeholder="What do you need to do?">
+                        <input class="w-100" type="textarea" id="desc" name="description" placeholder="What do you need to do?" required>
                     </div>
                     <hr>
                     <div class="w-100 d-flex">
@@ -57,20 +57,46 @@
                 </form>
 
                 <div style="height: 44vh; overflow-y: auto;" class="w-100 d-flex flex-column align-items-center">
-                    <% for(let i=0;i<5;i++){ %>
+                    <% for(let i of locals.todo_list){ %>
                         <div style="width: 85%;" class="pt-3 pb-3 border-top border-secondary d-flex justify-content-between">
                             <div class="d-flex">
                                 <input type="checkbox">
                                 
                                 <div class="mx-3">
-                                    <p style="font-size: 15px;">Why not add a task?</p>
-                                    <p style="color: #a1a3a0 !important;"><i style="color: #a1a3a0 !important;" class="fas fa-calendar-alt"></i>&ensp;MAY 2,2019</p>
+                                    <p style="font-size: 15px;"><%= i.description %></p>
+                                    <p style="color: #a1a3a0 !important;"><i style="color: #a1a3a0 !important;" class="fas fa-calendar-alt"></i>&ensp;
+                                        <% if(i.dueDate==""){ %>
+                                            NO DEADLINE
+                                        <% } else{ %>
+                                        <%= i.dueDate %>
+                                        <% } %>
+                                    </p>
                                 </div>
                             </div>
 
-                            <div id="categoryContainer" class="bg-danger px-3 d-flex justify-content-center align-items-center">
-                                SCHOOL
-                            </div>
+                            <% if(i.category==undefined){ %> 
+                                
+                            <% } else if(i.category=="PERSONAL"){ %>
+                                <div id="categoryContainer" class="bg-primary px-3 d-flex justify-content-center align-items-center">
+                                    <%= i.category %>
+                                </div>
+                            <% } else if(i.category=="WORK"){ %>
+                                <div id="categoryContainer" class="bg-success px-3 d-flex justify-content-center align-items-center">
+                                    <%= i.category %>
+                                </div>
+                            <% } else if(i.category=="SCHOOL"){ %>
+                                <div id="categoryContainer" class="bg-warning px-3 d-flex justify-content-center align-items-center">
+                                    <%= i.category %>
+                                </div>
+                            <% } else if(i.category=="CLEANING"){ %>
+                                <div id="categoryContainer" class="bg-info px-3 d-flex justify-content-center align-items-center">
+                                    <%= i.category %>
+                                </div>
+                            <% } else if(i.category=="OTHER"){ %>
+                                <div id="categoryContainer" class="bg-danger px-3 d-flex justify-content-center align-items-center">
+                                    <%= i.category %>
+                                </div>
+                            <% } %>
                         </div>
                     <% } %>
                 </div>
