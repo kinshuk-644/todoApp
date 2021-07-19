@@ -5,7 +5,6 @@ const router = express.Router();
 
 const homeController = require("../controllers/home_controller");
 const createTodoController = require("../controllers/create_todo_controller");
-const { urlencoded } = require("express");
 
 console.log("router loaded");
 

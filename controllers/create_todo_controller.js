@@ -12,6 +12,7 @@ module.exports.create = function(req,res){
     }
     
     Todo.create({
+        isChecked: false,
         description: req.body.description,
         category: req.body.category,
         dueDate: datee

@@ -1,6 +1,11 @@
 const mongoose = require("mongoose");
 
 const todoSchema = new mongoose.Schema({
+    isChecked: {
+        type: Boolean,
+        default: false
+    },
+
     description: {
         type: String,
         required: true
