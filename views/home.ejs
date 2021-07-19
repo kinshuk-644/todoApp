@@ -66,20 +66,30 @@
 
                                 <% if(i.isChecked){ %>
                                     <input checked id=`<%= i._id %>` type="checkbox" onclick="changeStatus(`<%= i._id %>`)">
+                                    <div class="mx-3">
+                                        <p style="font-size: 15px;text-decoration: line-through;"><%= i.description %></p>
+                                        <p style="color: #a1a3a0 !important;"><i style="color: #a1a3a0 !important;" class="fas fa-calendar-alt"></i>&ensp;
+                                            <% if(i.dueDate==""){ %>
+                                                NO DEADLINE
+                                            <% } else{ %>
+                                            <%= i.dueDate %>
+                                            <% } %>
+                                        </p>
+                                    </div>
                                 <% } else{ %>
                                     <input id=`<%= i._id %>` type="checkbox" onclick="changeStatus(`<%= i._id %>`)">
+                                    <div class="mx-3">
+                                        <p style="font-size: 15px;"><%= i.description %></p>
+                                        <p style="color: #a1a3a0 !important;"><i style="color: #a1a3a0 !important;" class="fas fa-calendar-alt"></i>&ensp;
+                                            <% if(i.dueDate==""){ %>
+                                                NO DEADLINE
+                                            <% } else{ %>
+                                            <%= i.dueDate %>
+                                            <% } %>
+                                        </p>
+                                    </div>
                                 <% } %>   
 
-                                <div class="mx-3">
-                                    <p style="font-size: 15px;"><%= i.description %></p>
-                                    <p style="color: #a1a3a0 !important;"><i style="color: #a1a3a0 !important;" class="fas fa-calendar-alt"></i>&ensp;
-                                        <% if(i.dueDate==""){ %>
-                                            NO DEADLINE
-                                        <% } else{ %>
-                                        <%= i.dueDate %>
-                                        <% } %>
-                                    </p>
-                                </div>
                             </div>
 
                             <% if(i.category==undefined){ %> 
