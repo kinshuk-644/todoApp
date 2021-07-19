@@ -22,7 +22,6 @@ module.exports.create = function(req,res){
             return;
         }
 
-        console.log("*******", newTodo);
         return res.redirect("back");
     });
 };

@@ -1,5 +1,7 @@
 const Todo = require("../models/todo");
 
+var inputs = require("../assets/js/home");
+
 module.exports.home = function(req,res){
 
     Todo.find({}, function(err, todos){

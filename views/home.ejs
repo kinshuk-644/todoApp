@@ -60,8 +60,13 @@
                     <% for(let i of locals.todo_list){ %>
                         <div style="width: 85%;" class="pt-3 pb-3 border-top border-secondary d-flex justify-content-between">
                             <div class="d-flex">
-                                <input type="checkbox">
-                                
+
+                                <% if(i.isChecked){ %>
+                                    <input checked id=`<%= i._id %>` type="checkbox" onclick="changeStatus(`<%= i._id %>`)">
+                                <% } else{ %>
+                                    <input id=`<%= i._id %>` type="checkbox" onclick="changeStatus(`<%= i._id %>`)">
+                                <% } %>   
+
                                 <div class="mx-3">
                                     <p style="font-size: 15px;"><%= i.description %></p>
                                     <p style="color: #a1a3a0 !important;"><i style="color: #a1a3a0 !important;" class="fas fa-calendar-alt"></i>&ensp;
