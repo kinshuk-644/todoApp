@@ -50,12 +50,15 @@
                     </div>
                     <hr>
 
-                    <div class="text-center">
+                    <div class="text-center w-100">
                         <button id="addBtn" class="p-2" type="submit"><i class="mr-3 fas fa-plus"></i>&ensp;ADD TASK</button>
-                        <button id="delBtn" class="p-2"><i class="mr-3 fas fa-trash-alt"></i>&ensp;DELETE TASKS</button>
+                        <a href="/delete-todos" class="p-2" id="delBtn">
+                            <i class="mr-3 fas fa-trash-alt"></i>&ensp;DELETE TASKS
+                        </a>
                     </div>
-                </form>
 
+                </form>
+                
                 <div style="height: 44vh; overflow-y: auto;" class="w-100 d-flex flex-column align-items-center">
                     <% for(let i of locals.todo_list){ %>
                         <div style="width: 85%;" class="pt-3 pb-3 border-top border-secondary d-flex justify-content-between">
