@@ -1,5 +1,6 @@
 const express = require("express");
 
+// require database and schema objects
 const db = require("./config/mongoose");
 const Todo = require("./models/todo");
 
@@ -14,9 +15,13 @@ app.use("/", require("./routes"));
 app.set("view engine","ejs");
 app.set("views","./views");
 
+// body parsing
 app.use(express.urlencoded({extended: true}));
+
+// use assets folder for css , images , fonts , js 
 app.use(express.static('assets'));
 
+// listen to the port 3000
 app.listen(port , function(err){
     if(err){
         console.log(`Error in running the server: ${err}`);
