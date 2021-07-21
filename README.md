@@ -7,6 +7,10 @@ Some **Screenshots** of the project:
 
 ![Screenshot from 2021-07-21 17-19-42](https://user-images.githubusercontent.com/63046538/126486971-a352a037-c984-44c2-a659-c6aebef9a75b.png)
 
+**Video Demo:**
+
+https://user-images.githubusercontent.com/63046538/126490383-e4574ad3-7b0b-4df1-897b-bc88d3f537ce.mp4
+
 # **Steps to run the project :**
 
 1. Make sure you have **node.js** , **mongoDB** , **Robo 3T**(optional , to visualize the schema) installed on your pc.
