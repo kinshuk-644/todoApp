@@ -1,5 +1,11 @@
 # todoApp
-A basic todo web application to add, store daily tasks, set deadlines and remove tasks.
+A basic **todo web application** to **add**, **store daily tasks**, **set deadlines** and **remove tasks**.
+
+Some **Screenshots** of the project:
+
+![Screenshot from 2021-07-21 17-19-27](https://user-images.githubusercontent.com/63046538/126486948-1b55daf3-fc20-4f89-9a61-103015b63ee5.png)
+
+![Screenshot from 2021-07-21 17-19-42](https://user-images.githubusercontent.com/63046538/126486971-a352a037-c984-44c2-a659-c6aebef9a75b.png)
 
 # **Steps to run the project :**
 
