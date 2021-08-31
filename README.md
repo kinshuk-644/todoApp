@@ -1,5 +1,5 @@
 # todoApp
-A basic **todo web application** to **add**, **store daily tasks**, **set deadlines** and **remove tasks**.
+A basic **toDo web application** to **add**, **store daily tasks**, **set deadlines** and **remove tasks**.
 
 Some **Screenshots** of the project:
 
